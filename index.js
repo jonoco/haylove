@@ -27,9 +27,11 @@ app.use(function(req, res, next) {
   next();
 });
 
+const PORT = process.env.PORT || 5000;
+
 app.set('view engine', 'pug');
 app.locals.basedir = path.join(__dirname, 'views');
-app.set('port', process.argv[2]);
+app.set('port', PORT);
 app.use(express.static('static'));
 
 
