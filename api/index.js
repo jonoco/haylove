@@ -5,7 +5,7 @@ const axios = require('axios');
 const path = require('path');
 const session = require('express-session');
 
-const profiles = require('./profiles.json').profiles;
+const profiles = require('../profiles.json').profiles;
 
 const app = express();
 
@@ -30,10 +30,11 @@ app.use(function(req, res, next) {
 const PORT = process.env.PORT || 5000;
 
 app.set('view engine', 'pug');
-app.locals.basedir = path.join(__dirname, 'views');
+app.locals.basedir = path.join('views');
 app.set('port', PORT);
-app.use(express.static('static'));
-
+if (process.env.NODE_ENV === 'development') {
+  app.use(express.static('public'));
+}
 
 /*
   Displays homepage
@@ -175,3 +176,5 @@ app.use(function(err, req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Server started on port ' + app.get('port'));
 });
+
+module.exports = app;
