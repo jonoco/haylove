@@ -1,0 +1,39 @@
+.browse {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.card {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  color: #333;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 50px;
+  text-decoration: none;
+  transition: all ease 0.1s;
+  width: 500px;
+}
+
+.image {
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.card:hover {
+  background: #38e7b6;
+}
+
+.name {
+  font-size: 22px;
+}
+
+.bio {
+  margin-left: 30px;
+}

@@ -1,0 +1,45 @@
+.home h1,
+.home p {
+  color: #fff;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #333,
+    1px -1px 0 #333,
+    -1px 1px 0 #333,
+    -1px -1px 0 #333;
+  width: 100%;
+}
+
+.title {
+  font-size: 190px;
+  z-index: -1;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.roamContainer {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.roam {
+  background: linear-gradient(0.25turn, #3f87a6, #f69d3c);
+  border-radius: 30px;
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  height: 60px;
+  width: 240px;
+  z-index: 100;
+  transition: all 0.1s ease-in-out;
+}
+
+.roam:hover {
+  background: linear-gradient(0.25turn, #fff, #fff);
+  color: #ff146a;
+}

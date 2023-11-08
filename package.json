@@ -1,27 +1,30 @@
 {
-  "name": "horse",
-  "version": "1.0.0",
-  "description": "Tinder for horses",
-  "main": "index.js",
+  "name": "haylove",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node ./api/index.js",
-    "dev": "NODE_ENV='development' nodemon ./api/index 3000"
-  },
-  "author": "Joshua N. Cox <joshua.n.cox@gmail.com>",
-  "license": "MIT",
-  "engines" : { 
-    "node" : ">=18.0.0 <19.0.0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:tsc": "tsc --noEmit",
+    "lint:prettier": "npx prettier --check .",
+    "prettier": "npx prettier --write ."
   },
   "dependencies": {
-    "axios": "0.19.2",
-    "body-parser": "1.19.0",
-    "cors": "2.8.5",
-    "express": "4.17.1",
-    "express-session": "1.17.0",
-    "forever": "2.0.0",
-    "pug": "2.0.4"
+    "@tabler/icons-react": "^2.40.0",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5"
   }
 }
